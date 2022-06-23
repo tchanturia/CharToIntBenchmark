@@ -1,5 +1,7 @@
 # CharToIntBenchmark
 
+https://github.com/tchanturia/CharToIntBenchmark/blob/157d534192814fb43a0364cfaecb7b102da8c9c9/CharToIntBenchmarks/Program.cs#L21-L25
+
 ```
 |          Method |           Job |       Runtime |       Mean |     Error |    StdDev |     Median |
 |---------------- |-------------- |-------------- |-----------:|----------:|----------:|-----------:|
