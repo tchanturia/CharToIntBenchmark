@@ -23,5 +23,19 @@ namespace CharToIntBenchmarks
 
         [Benchmark]
         public int SubtractAndCast() => stringNumber[0] - '0';
+
+        [Benchmark]
+        public (bool, int) TryParse()
+        {
+            var result = int.TryParse(stringNumber.AsSpan(0, 1), out var digit);
+            return (result, digit);
+        }
+
+        [Benchmark]
+        public (bool, int) TrySubtractAndCast()
+        {
+            var digit = stringNumber[0] - '0';
+            return (digit < 10, digit);
+        }
     }
 }
