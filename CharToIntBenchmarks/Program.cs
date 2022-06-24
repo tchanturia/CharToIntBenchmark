@@ -44,5 +44,8 @@ namespace CharToIntBenchmarks
             var digit = stringNumber[0] - '0';
             return (Math.Abs(digit) < 10, digit);
         }
+
+        [Benchmark]
+        public int Bitwise() => stringNumber[0] ^ 48;
     }
 }

@@ -10,16 +10,19 @@ Intel Core i7-10750H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
   .NET 6.0      : .NET 6.0.6 (6.0.622.26707), X64 RyuJIT
   .NET Core 3.1 : .NET Core 3.1.26 (CoreCLR 4.700.22.26002, CoreFX 4.700.22.26801), X64 RyuJIT
 
+
 |                                   Method |           Job |       Runtime |       Mean |     Error |    StdDev |     Median |
 |----------------------------------------- |-------------- |-------------- |-----------:|----------:|----------:|-----------:|
-|                                 IntParse |      .NET 6.0 |      .NET 6.0 | 10.6099 ns | 0.2337 ns | 0.2598 ns | 10.5779 ns |
-|                          SubtractAndCast |      .NET 6.0 |      .NET 6.0 |  0.0062 ns | 0.0102 ns | 0.0096 ns |  0.0006 ns |
-|                                 TryParse |      .NET 6.0 |      .NET 6.0 | 15.8664 ns | 0.3433 ns | 0.3211 ns | 15.6611 ns |
-| TrySubtractAndCast_PositiveNegativeCheck |      .NET 6.0 |      .NET 6.0 |  6.2096 ns | 0.1454 ns | 0.1360 ns |  6.1483 ns |
-|                   TrySubtractAndCast_Abs |      .NET 6.0 |      .NET 6.0 |  5.9472 ns | 0.1275 ns | 0.1193 ns |  5.9132 ns |
-|                                 IntParse | .NET Core 3.1 | .NET Core 3.1 | 14.4707 ns | 0.2158 ns | 0.1802 ns | 14.3912 ns |
-|                          SubtractAndCast | .NET Core 3.1 | .NET Core 3.1 |  0.0298 ns | 0.0258 ns | 0.0242 ns |  0.0179 ns |
-|                                 TryParse | .NET Core 3.1 | .NET Core 3.1 | 16.7906 ns | 0.0852 ns | 0.0797 ns | 16.7524 ns |
-| TrySubtractAndCast_PositiveNegativeCheck | .NET Core 3.1 | .NET Core 3.1 |  6.0824 ns | 0.0265 ns | 0.0235 ns |  6.0704 ns |
-|                   TrySubtractAndCast_Abs | .NET Core 3.1 | .NET Core 3.1 |  6.1671 ns | 0.1105 ns | 0.1034 ns |  6.1687 ns |
+|                                 IntParse |      .NET 6.0 |      .NET 6.0 |  7.6472 ns | 0.0539 ns | 0.0478 ns |  7.6274 ns |
+|                          SubtractAndCast |      .NET 6.0 |      .NET 6.0 |  0.0033 ns | 0.0044 ns | 0.0041 ns |  0.0019 ns |
+|                                 TryParse |      .NET 6.0 |      .NET 6.0 | 12.1486 ns | 0.0950 ns | 0.0889 ns | 12.1595 ns |
+| TrySubtractAndCast_PositiveNegativeCheck |      .NET 6.0 |      .NET 6.0 |  4.6992 ns | 0.0341 ns | 0.0302 ns |  4.6967 ns |
+|                   TrySubtractAndCast_Abs |      .NET 6.0 |      .NET 6.0 |  4.7813 ns | 0.1212 ns | 0.1991 ns |  4.8044 ns |
+|                                  Bitwise |      .NET 6.0 |      .NET 6.0 |  0.0139 ns | 0.0218 ns | 0.0204 ns |  0.0043 ns |
+|                                 IntParse | .NET Core 3.1 | .NET Core 3.1 | 12.0210 ns | 0.1235 ns | 0.1031 ns | 12.0362 ns |
+|                          SubtractAndCast | .NET Core 3.1 | .NET Core 3.1 |  0.0451 ns | 0.0234 ns | 0.0230 ns |  0.0374 ns |
+|                                 TryParse | .NET Core 3.1 | .NET Core 3.1 | 13.0476 ns | 0.1995 ns | 0.1558 ns | 13.0223 ns |
+| TrySubtractAndCast_PositiveNegativeCheck | .NET Core 3.1 | .NET Core 3.1 |  4.7489 ns | 0.0331 ns | 0.0310 ns |  4.7432 ns |
+|                   TrySubtractAndCast_Abs | .NET Core 3.1 | .NET Core 3.1 |  4.7346 ns | 0.0492 ns | 0.0436 ns |  4.7243 ns |
+|                                  Bitwise | .NET Core 3.1 | .NET Core 3.1 |  0.0163 ns | 0.0052 ns | 0.0046 ns |  0.0158 ns |
 ```
