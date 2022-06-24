@@ -32,10 +32,17 @@ namespace CharToIntBenchmarks
         }
 
         [Benchmark]
-        public (bool, int) TrySubtractAndCast()
+        public (bool, int) TrySubtractAndCast_PositiveNegativeCheck()
         {
             var digit = stringNumber[0] - '0';
-            return (digit < 10, digit);
+            return (digit > -10 && digit < 10, digit);
+        }
+
+        [Benchmark]
+        public (bool, int) TrySubtractAndCast_Abs()
+        {
+            var digit = stringNumber[0] - '0';
+            return (Math.Abs(digit) < 10, digit);
         }
     }
 }
