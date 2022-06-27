@@ -18,13 +18,10 @@ namespace CharToIntBenchmarks
     {
         string stringNumber = "1234";
 
-        [Benchmark]
         public int IntParse() => int.Parse(stringNumber.AsSpan(0, 1));
 
-        [Benchmark]
         public int SubtractAndCast() => stringNumber[0] - '0';
 
-        [Benchmark]
         public (bool, int) TryParse()
         {
             var result = int.TryParse(stringNumber.AsSpan(0, 1), out var digit);
@@ -32,20 +29,12 @@ namespace CharToIntBenchmarks
         }
 
         [Benchmark]
-        public (bool, int) TrySubtractAndCast_PositiveNegativeCheck()
+        public (bool, int) TrySubtractAndCast()
         {
             var digit = stringNumber[0] - '0';
-            return (digit > -10 && digit < 10, digit);
+            return (digit < 10, digit);
         }
 
-        [Benchmark]
-        public (bool, int) TrySubtractAndCast_Abs()
-        {
-            var digit = stringNumber[0] - '0';
-            return (Math.Abs(digit) < 10, digit);
-        }
-
-        [Benchmark]
         public int Bitwise() => stringNumber[0] ^ 48;
     }
 }
